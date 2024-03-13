@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
