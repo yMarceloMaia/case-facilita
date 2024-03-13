@@ -34,7 +34,7 @@ function Order({ setControlShowOrder }: any) {
 
         <div className="flex flex-col w-full justify-between border p-5 h-full bg-black bg-opacity-50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 items-center  md:inset-0 max-h-full" >
             <div className=" w-3/5 h-4/5">
-                <div className="w-full h-full">
+                <div className="w-full h-full bg-[#f7f5ff] flex justify-center">
                     {
                         orderData.length > 2 ||  checkedClients.length > 0?
 
