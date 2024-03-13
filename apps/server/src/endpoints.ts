@@ -73,7 +73,7 @@ export const calculateRouter = async (req: Request, res: Response) => {
 // MANIPULAÇÃO DO BANCO DE DADOS
 
 // Função para criar tabela 'clients' no banco de dados
-export const registerTableClients = async () => {
+export const registerTableClients = async (req?: Request, res?: Response) => {
     try {
         await pool.query(`
             CREATE TABLE IF NOT EXISTS clients (
@@ -84,8 +84,11 @@ export const registerTableClients = async () => {
             coordinate_x DOUBLE PRECISION,
             coordinate_y DOUBLE PRECISION
         );`);
+
+        res?.status(201).send('ok')
     } catch (error) {
         console.error('Erro ao criar tabela clientes:', error);
+        res?.status(500).send(error)
     }
 }
 
